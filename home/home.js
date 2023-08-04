@@ -1,48 +1,29 @@
-let moving = setTimeout(function () {
-    let loadDiv = document.getElementById("load");
-    loadDiv.style.backgroundPosition = "center top";
-}, 500);
+let indexList = document.getElementById("index").getElementsByTagName("li");
 
-let text = "너의 이름은.";
-
-function typeEffect(text, i) {
-    if (i < text.length) {
-        if (text.charAt(i) === " ") {
-            // 공백 문자일 경우 HTML entity로 변환
-            document.getElementById("typing").innerHTML += "&nbsp;";
-        } else {
-            document.getElementById("typing").innerHTML += text.charAt(i);
-        }
-        i++;
-        setTimeout(function () {
-            typeEffect(text, i);
-        }, 300); // 각 글자가 출력되는 시간 간격 (200ms)
-    }
+for (let i = 0; i < indexList.length; i++) {
+    indexList[i].addEventListener("click", function () {
+        let link = this.getAttribute("data-link");
+        location.href = link;
+    });
 }
 
-setTimeout(() => typeEffect(text, 0), 2000);
+let yourName = document
+    .getElementById("posters")
+    .getElementsByTagName("img")[1];
 
-// 로딩 화면 후 사라진 로딩 화면 뒤로 보내기
-setTimeout(() => {
-    let loadDiv = document.getElementById("load");
-    let typeDiv = document.getElementById("typing");
-    loadDiv.style.zIndex = -1;
-    typeDiv.style.zIndex = -1;
-}, 6000);
+let pageChangeEffecter_YourName = () => {
+    const sha = document.getElementById("sha");
+    sha.classList.add("go_front");
 
-//BGM Controls
-let bgmCtrl = document.getElementById("bgmCtrl");
-let bgm = document.getElementById("bgm");
-let playState = false;
+    yourName.style.animation = "zoomIn 1.5s forwards";
+    let link = yourName.getAttribute("data-link"); // 이미지를 클릭했을 때 이동할 페이지 URL
 
-bgmCtrl.addEventListener("click", function () {
-    if (playState === false) {
-        bgm.play();
-        bgmCtrl.src = "../src/pause.png";
-        playState = true;
-    } else {
-        bgm.pause();
-        bgmCtrl.src = "../src/play.png";
-        playState = false;
-    }
-});
+    setTimeout(() => {
+        sha.classList.add("shasha");
+    }, 800);
+    setTimeout(() => {
+        window.location.href = link; // 페이지 이동
+    }, 2000);
+};
+
+yourName.addEventListener("click", pageChangeEffecter_YourName);

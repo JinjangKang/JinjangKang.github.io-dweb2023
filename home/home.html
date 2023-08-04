@@ -1,64 +1,53 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
     <head>
         <meta charset="UTF-8" />
-        <title>Loader</title>
-        <link rel="stylesheet" href="../home/home.css" />
+        <title>아직 만난 적 없는 너를, 찾고 있어.</title>
+        <link rel="stylesheet" href="./home.css" />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;500&display=swap"
-            rel="stylesheet"
-        />
-
-        <div>
+        <!-- <div>
             <div id="load"></div>
             <div id="typing"></div>
         </div>
+        <script src="./loading.js"></script> -->
+
+        <!-- <img src="../src/daijin.jpeg" width="300px" /> -->
 
         <header>
-            <img src="../src/logo2.svg" alt="스즈메의 문단속" />
+            <img src="../src/ynLogo.svg" alt="너의 이름은." />
             <ul id="index">
-                <li>스즈메의 문단속</li>
-                <li>너의 이름은</li>
-                <li>날씨의 아이</li>
-                <li>초속 5센티미터</li>
-                <li>그 외</li>
+                <li data-link="../home/home.html">홈</li>
+                <li data-link="../suzume/suzume.html">스즈메의 문단속</li>
+                <li data-link="../yourName/yourName.html">너의 이름은</li>
+                <li data-link="../weatheringWithYou/wethering.html">
+                    날씨의 아이
+                </li>
+                <li data-link="../5CentimetersPerSecond/5CPS.html">
+                    초속 5센티미터
+                </li>
+                <li data-link="../otherPage/other.html">그 외</li>
             </ul>
         </header>
     </head>
     <body>
-        <div id="trailer">
-            <div>예고편</div>
-            <iframe
-                id="trailer1"
-                src="https://www.youtube.com/embed/x1Y_pud2_FY"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-                >국내 1차 예고편</iframe
-            >
-            <iframe
-                id="trailer2"
-                src="https://www.youtube.com/embed/4-CyfHhVKnc"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-                >국내 2차 예고편</iframe
-            >
+        <div id="posters">
+            <div>
+                <img src="../src/suzumePoster.webp" />
+            </div>
+            <div>
+                <img
+                    src="../src/ynPoster.webp"
+                    data-link="../suzume/suzume.html"
+                />
+            </div>
+            <div>
+                <img src="../src/weatherPoster.webp" />
+            </div>
+            <div>
+                <img src="../src/5cpsPoster.webp" />
+            </div>
         </div>
-
-        <div></div>
-
-        <img id="bgmCtrl" src="../src/play.png" />
+        <div id="sha"></div>
+        <script src="./home.js"></script>
     </body>
-    <footer>
-        <audio id="bgm" preload="auto" loop>
-            <source src="../src/suzume.mp3"
-        </audio>
-        <script src="../home/home.js"></script>
-    </footer>
 </html>

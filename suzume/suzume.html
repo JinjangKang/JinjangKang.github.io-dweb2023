@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>스즈메의 문단속</title>
+        <link rel="stylesheet" href="./suzume.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;500&display=swap"
+            rel="stylesheet"
+        />
+
+        <div id="ahs"></div>
+
+        <header>
+            <img src="../src/suzumeLogo.webp" alt="스즈메의 문단속" />
+            <ul id="index">
+                <li data-link="../home/home.html">홈</li>
+                <li data-link="../suzume/suzume.html">스즈메의 문단속</li>
+                <li data-link="../yourName/yourName.html">너의 이름은</li>
+                <li data-link="../weatheringWithYou/wethering.html">
+                    날씨의 아이
+                </li>
+                <li data-link="../5CentimetersPerSecond/5CPS.html">
+                    초속 5센티미터
+                </li>
+                <li data-link="../otherPage/other.html">그 외</li>
+            </ul>
+        </header>
+    </head>
+    <body>
+        <div id="note1">
+            <!-- <div id="tag">&nbsp;예고편&nbsp;</div> -->
+            <div id="trailer">
+                <iframe
+                    id="trailer1"
+                    src="https://www.youtube.com/embed/x1Y_pud2_FY"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    >국내 1차 예고편</iframe
+                >
+                <iframe
+                    id="trailer2"
+                    src="https://www.youtube.com/embed/4-CyfHhVKnc"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    >국내 2차 예고편</iframe
+                >
+            </div>
+        </div>
+        <div id="bgmInfo">
+            <img id="bgmCtrl" src="../src/play.png" />
+            <div>
+                <p id="bgmName">すずめ(feat. Toaka) - RADWIMPS</p>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <audio id="bgm" preload="auto" loop>
+            <source src="../src/suzume.mp3"
+        </audio>
+        <script src="./suzume.js"></script>
+    </footer>
+</html>
