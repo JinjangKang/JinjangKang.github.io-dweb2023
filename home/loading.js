@@ -1,10 +1,3 @@
-let moving = setTimeout(function () {
-    let loadDiv = document.getElementById("load");
-    loadDiv.style.backgroundPosition = "center top";
-}, 500);
-
-let text = "너의 이름은.";
-
 function typeEffect(text, i) {
     if (i < text.length) {
         if (text.charAt(i) === " ") {
@@ -20,12 +13,26 @@ function typeEffect(text, i) {
     }
 }
 
-setTimeout(() => typeEffect(text, 0), 2000);
+window.addEventListener("load", () => {
+    let moving = setTimeout(function () {
+        let loadDiv = document.getElementById("load");
+        loadDiv.style.backgroundPosition = "center top";
+    }, 500);
 
-// 로딩 화면 후 사라진 로딩 화면 뒤로 보내기
-setTimeout(() => {
-    let loadDiv = document.getElementById("load");
-    let typeDiv = document.getElementById("typing");
-    loadDiv.style.zIndex = -1;
-    typeDiv.style.zIndex = -1;
-}, 6000);
+    let text = "너의 이름은.";
+
+    setTimeout(() => typeEffect(text, 0), 2000);
+
+    setTimeout(() => {
+        let wrapper = document.getElementById("wrapper");
+        wrapper.classList.remove("off");
+    }, 4000);
+
+    // 로딩 화면 후 사라진 로딩 화면 뒤로 보내기
+    setTimeout(() => {
+        let loadDiv = document.getElementById("load");
+        let typeDiv = document.getElementById("typing");
+        loadDiv.style.zIndex = -1;
+        typeDiv.style.zIndex = -1;
+    }, 6000);
+});
