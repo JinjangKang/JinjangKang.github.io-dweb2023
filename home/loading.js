@@ -25,6 +25,9 @@ window.addEventListener("load", () => {
 
     setTimeout(() => {
         let wrapper = document.getElementById("wrapper");
+        let body = document.querySelector("body");
+        body.style.backgroundImage =
+            "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../src/homeBg.jpeg')";
         wrapper.classList.remove("off");
     }, 4000);
 
