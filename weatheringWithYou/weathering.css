@@ -1,5 +1,6 @@
 body {
     height: 100vh;
+    margin: 0;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
         url(../src/weatherBGI.jpeg);
     background-size: cover;
@@ -18,7 +19,7 @@ header {
     color: black;
     background: transparent;
 
-    font-weight: bold;
+    /* font-weight: bold; */
     display: flex;
     justify-content: space-between;
     align-items: center;

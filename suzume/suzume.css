@@ -1,10 +1,6 @@
-html {
-    height: 100vh;
-}
 body {
     height: 100vh;
     margin: 0;
-    /* margin-top: 75px; */
     overflow: hidden;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
         url("../src/bg2.avif");
@@ -44,7 +40,7 @@ header {
     color: black;
     background: transparent;
 
-    font-weight: bold;
+    /* font-weight: bold; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -96,20 +92,6 @@ header img:hover {
     transform: translate(0%, -50%);
     /* background-color: black; */
 }
-/* 
-#tag {
-    position: absolute;
-    margin-left: 5%;
-
-    color: #ffffff;
-    font-size: 22px;
-    font-family: "Noto Serif KR", serif;
-
-    border: solid;
-    border-color: #ffffff;
-    border-radius: 8px;
-    z-index: 1;
-} */
 
 #trailer {
     /* background-color: #ffffff; */
