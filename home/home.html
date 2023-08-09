@@ -62,5 +62,13 @@
             <div id="sha"></div>
         </div>
         <script src="./home.js"></script>
+        <script>
+            //개발중에만 켜놓기
+            let wrapper = document.getElementById("wrapper");
+            let body = document.querySelector("body");
+            body.style.backgroundImage =
+                "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../src/homeBg.jpeg')";
+            wrapper.classList.remove("off");
+        </script>
     </body>
 </html>
