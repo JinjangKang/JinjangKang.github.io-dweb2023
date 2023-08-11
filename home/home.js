@@ -7,11 +7,16 @@ for (let i = 0; i < indexList.length; i++) {
     });
 }
 
-let pageChangeEffecter = (poster) => {
+let moviePoster = document
+    .getElementById("posters")
+    .getElementsByTagName("img");
+
+let pageChangeEffecter = (poster, idx) => {
     const sha = document.getElementById("sha");
     sha.classList.add("go_front");
 
-    poster.style.animation = "zoomIn 2s forwards";
+    poster.style.animation = `zoomIn${idx} 2s forwards`;
+
     let link = poster.getAttribute("data-link"); // 이미지를 클릭했을 때 이동할 페이지 URL
 
     setTimeout(() => {
@@ -22,10 +27,6 @@ let pageChangeEffecter = (poster) => {
     }, 2000);
 };
 
-let moviePoster = document
-    .getElementById("posters")
-    .getElementsByTagName("img");
-
-[...moviePoster].forEach((element) => {
-    element.addEventListener("click", () => pageChangeEffecter(element));
+[...moviePoster].forEach((element, idx) => {
+    element.addEventListener("click", () => pageChangeEffecter(element, idx));
 });

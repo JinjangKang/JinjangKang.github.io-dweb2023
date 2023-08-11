@@ -159,33 +159,49 @@ body {
 
 #posters {
     position: relative;
+    top: -15%;
     display: flex;
     width: 80%;
     margin-bottom: 100px;
     justify-content: space-between;
 }
 
-#posters div {
-    width: 18vw;
-}
+#posters img {
+    width: 21%;
 
-#posters div img {
-    /* position: relative; */
-    width: 18vw;
     border-radius: 8px;
     transition-property: transform;
     transition-duration: 0.2s;
 }
 
-#posters div img:hover {
+#posters #p1 {
+    position: absolute;
+    left: 2%;
+}
+#posters #p2 {
+    position: absolute;
+    left: 27%;
+}
+#posters #p3 {
+    position: absolute;
+    left: 52%;
+}
+#posters #p4 {
+    position: absolute;
+    left: 77%;
+}
+
+#posters img:hover {
     transform: scale(1.1);
     transition-timing-function: linear;
     cursor: pointer;
 }
 
-@keyframes zoomIn {
+@keyframes zoomIn0 {
     0% {
         position: absolute;
+        left: 2%;
+
         transform: scale(1.1);
         z-index: 2;
     }
@@ -194,13 +210,73 @@ body {
         position: absolute;
 
         left: 50%;
-        transform: translate(-50%, 0%) scale(1.1);
+        transform: translate(-50%) scale(1.1);
         z-index: 2;
     }
 
     100% {
         position: absolute;
+        left: 50%;
 
+        transform: translate(-50%) scale(1.8);
+        z-index: 2;
+    }
+}
+@keyframes zoomIn1 {
+    0% {
+        left: 27%;
+
+        transform: scale(1.1);
+        z-index: 2;
+    }
+
+    30% {
+        left: 50%;
+        transform: translate(-50%, 0%) scale(1.1);
+        z-index: 2;
+    }
+
+    100% {
+        left: 50%;
+        transform: translate(-50%, 0%) scale(1.8);
+        z-index: 2;
+    }
+}
+@keyframes zoomIn2 {
+    0% {
+        left: 52%;
+
+        transform: scale(1.1);
+        z-index: 2;
+    }
+
+    30% {
+        left: 50%;
+        transform: translate(-50%, 0%) scale(1.1);
+        z-index: 2;
+    }
+
+    100% {
+        left: 50%;
+        transform: translate(-50%, 0%) scale(1.8);
+        z-index: 2;
+    }
+}
+@keyframes zoomIn3 {
+    0% {
+        left: 77%;
+
+        transform: scale(1.1);
+        z-index: 2;
+    }
+
+    30% {
+        left: 50%;
+        transform: translate(-50%, 0%) scale(1.1);
+        z-index: 2;
+    }
+
+    100% {
         left: 50%;
         transform: translate(-50%, 0%) scale(1.8);
         z-index: 2;
