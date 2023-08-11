@@ -9,7 +9,8 @@
             rel="stylesheet"
         />
     </head>
-    <head>
+    <head> </head>
+    <body>
         <div id="ahs"></div>
 
         <header>
@@ -27,8 +28,126 @@
                 <li data-link="../otherPage/other.html">그 외</li>
             </ul>
         </header>
-    </head>
-    <body>
+
+        <div id="note1">
+            <div class="tabBoard">
+                <input id="tab1" type="radio" name="tabs" checked />
+                <!--디폴트 메뉴-->
+                <label for="tab1">시놉시스</label>
+
+                <input id="tab2" type="radio" name="tabs" />
+                <label for="tab2">등장인물</label>
+
+                <input id="tab3" type="radio" name="tabs" />
+                <label for="tab3">평 가</label>
+
+                <input id="tab4" type="radio" name="tabs" />
+                <label for="tab4">영화 정보</label>
+                <div id="sections">
+                    <section id="content1">
+                        <p>
+                            "있잖아. 초속 5센티미터래" <br /><br />
+                            벚꽃이 은은하게 떨어져가는 길을 걷고 있는 어린
+                            시절의 아카리와 타카키.<br />
+                            아카리는 흩날리는 벚꽃을 보며 벚꽃이 떨어지는 속도가
+                            초속 5cm라고 타카키에게 말해준다.<br /><br />
+                            떨어져가는 꽃잎들에 손바닥을 대보며, 마치 눈꽃 같아
+                            보인다고 속삭이는 아카리.<br />
+                            아카리는 무엇인가 떠오른 듯 타카키를 앞질러 뛰기
+                            시작한다.<br /><br />
+                            타카키도 아카리를 향해 뛰어가지만 철도 건널목 사이를
+                            두고 대치하게 된다.<br />
+                            아카리는 내년에도 같이 벚꽃을 봤으면 좋겠다며
+                            타카키를 향해 미소를 짓는다.<br /><br />
+                            이윽고 아카리의 클로즈업된 모습이 철도를 지나는
+                            열차에 의해 가려지며 이야기는 시작된다.
+                        </p>
+                        <br />
+                        <br />
+                    </section>
+
+                    <section id="content2">
+                        <p>토오노 타카키(遠野貴樹)</p>
+
+                        <p>시노하라 아카리(篠原明里)</p>
+
+                        <p>스미다 카나에(澄田花苗)</p>
+
+                        <p>미즈노 리사(水野理紗)</p>
+
+                        <br />
+                        <br />
+                    </section>
+
+                    <section id="content3">
+                        <div>
+                            <img
+                                src="../src/RottenTomatoesLogo.svg"
+                                alt="Rotten Tomatoes"
+                            />
+                            <p>
+                                신선도 없음<br />
+                                관객 점수 88%
+                            </p>
+                        </div>
+                        <div>
+                            <img src="../src/IMDbLogo.svg" alt="IMDb" />
+                            <p>평점 7.5/10</p>
+                        </div>
+                        <div>
+                            <img src="../src/CGVscoreLogo.webp" alt="CGV" />
+                            <p>지수 87%</p>
+                        </div>
+                        <br />
+                        <br />
+                    </section>
+
+                    <section id="content4">
+                        <p>장르 : 애니메이션</p>
+                        <p>감독 : 신카이 마코토</p>
+                        <p>음악 : 텐몬</p>
+                        <p>
+                            타이틀 곡 : One More Time, One More Chance -
+                            Yamazaki Masyoshi
+                        </p>
+                        <br />
+                        <div>
+                            <img
+                                id="age"
+                                class="inc"
+                                src="../src/overAllLogo.svg"
+                            />
+                            <img class="inc" src="../src/comixwaveLogo.svg" />
+                            <img class="inc" src="../src/mediacastleLogo.svg" />
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div id="note2">
+            <!-- <div id="tag">&nbsp;예고편&nbsp;</div> -->
+            <div id="trailer">
+                <iframe
+                    id="trailer1"
+                    src="https://www.youtube.com/embed/eA7nDGE_E00"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    >[초속5센티미터] 2020ver. 예고편</iframe
+                >
+                <iframe
+                    id="trailer2"
+                    src="https://www.youtube.com/embed/dLn7N6Dyxbo"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    >"초속5센티미터" 우리말 더빙판 메인예고편</iframe
+                >
+            </div>
+        </div>
         <script src="./5CPS.js"></script>
     </body>
 </html>

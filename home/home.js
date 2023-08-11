@@ -19,12 +19,12 @@ let pageChangeEffecter = (poster, idx) => {
 
     let link = poster.getAttribute("data-link"); // 이미지를 클릭했을 때 이동할 페이지 URL
 
-    setTimeout(() => {
-        sha.classList.add("shasha");
-    }, 800);
-    setTimeout(() => {
-        window.location.href = link; // 페이지 이동
-    }, 2000);
+    // setTimeout(() => {
+    //     sha.classList.add("shasha");
+    // }, 800);
+    // setTimeout(() => {
+    //     window.location.href = link; // 페이지 이동
+    // }, 2000);
 };
 
 [...moviePoster].forEach((element, idx) => {
