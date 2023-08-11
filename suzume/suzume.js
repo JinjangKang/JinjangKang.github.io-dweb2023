@@ -25,3 +25,33 @@ bgmCtrl.addEventListener("click", function () {
         playState = false;
     }
 });
+
+let bgChanger = document
+    .getElementById("backgroundChanger")
+    .querySelector("img");
+let brightness = document.getElementById("brightness");
+let html = document.querySelector("html");
+
+bgChanger.addEventListener("mouseover", () => {
+    document.querySelector("header").style.animation = "backViewer 1s forwards";
+    document.getElementById("note1").style.animation = "backViewer 1s forwards";
+    document.getElementById("note2").style.animation = "backViewer 1s forwards";
+    brightness.style.animation = "backViewer 1s forwards";
+});
+bgChanger.addEventListener("mouseout", () => {
+    document.querySelector("header").style.animation =
+        "leaveViewer 1s forwards";
+    document.getElementById("note1").style.animation =
+        "leaveViewer 1s forwards";
+    document.getElementById("note2").style.animation =
+        "leaveViewer 1s forwards";
+    brightness.style.animation = "leaveViewer 1s forwards";
+});
+
+let bgList = ["1.avif", "2.jpeg", "3.jpeg", "4.jpeg", "5.jpeg", "6.jpeg"];
+let i = 0;
+bgChanger.addEventListener("click", () => {
+    i++;
+    html.style.backgroundImage = `url(../src/suzumebg${bgList[i]})`;
+    if (i == 5) i = -1;
+});

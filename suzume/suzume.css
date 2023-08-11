@@ -5,14 +5,18 @@ html {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+
+    background-image: url("../src/suzumebg1.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 75%;
 }
 
 body {
     height: 100vh;
     margin: 0;
     overflow: hidden;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url("../src/bg2.avif");
+
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center 75%;
@@ -27,7 +31,15 @@ body {
 
     animation: ahs 1s linear forwards;
 }
+#brightness {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
 
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 0;
+}
 @keyframes ahs {
     0% {
         opacity: 1;
@@ -287,14 +299,13 @@ input:not(:checked) + label {
 
 #bgmInfo {
     /* background-color: rgba(99, 169, 231, 0.3); */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
     border-radius: 10px;
     position: fixed;
     bottom: 3%;
     left: 2%;
     width: 200px;
     height: 40px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 
     overflow: hidden;
 }
@@ -334,6 +345,48 @@ input:not(:checked) + label {
     transform: translateY(-50%);
 
     animation: text-scroll 10s linear infinite;
+}
+
+#backgroundChanger {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    border-radius: 10px;
+    position: fixed;
+    bottom: 3%;
+    right: 2%;
+    width: 50px;
+    height: 50px;
+
+    overflow: hidden;
+}
+
+#backgroundChanger:hover {
+    cursor: pointer;
+}
+#backgroundChanger img {
+    position: absolute;
+    width: 70%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-44%, -47%);
+    opacity: 0.8;
+}
+
+@keyframes backViewer {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes leaveViewer {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes text-scroll {
