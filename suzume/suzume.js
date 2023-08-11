@@ -31,6 +31,7 @@ let bgChanger = document
     .querySelector("img");
 let brightness = document.getElementById("brightness");
 let html = document.querySelector("html");
+let bgimg = document.getElementById("bgimg");
 
 bgChanger.addEventListener("mouseover", () => {
     document.querySelector("header").style.animation = "backViewer 1s forwards";
@@ -49,9 +50,14 @@ bgChanger.addEventListener("mouseout", () => {
 });
 
 let bgList = ["1.avif", "2.jpeg", "3.jpeg", "4.jpeg", "5.jpeg", "6.jpeg"];
-let i = 0;
+let i = 1;
 bgChanger.addEventListener("click", () => {
-    i++;
-    html.style.backgroundImage = `url(../src/suzumebg${bgList[i]})`;
-    if (i == 5) i = -1;
+    bgimg.style.animation = "press 0.5s forwards";
+    setTimeout(() => {
+        bgimg.style.backgroundImage = `url(../src/suzumebg${bgList[i]})`;
+    }, 500);
+    setTimeout(() => {
+        bgimg.style.animation = "spread 0.5s forwards";
+    }, 1000);
+    i == 5 ? (i = 0) : i++;
 });
