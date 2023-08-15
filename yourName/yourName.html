@@ -10,8 +10,9 @@
         />
     </head>
     <body>
+        <div id="bgimg"></div>
         <div id="ahs"></div>
-
+        <div id="brightness"></div>
         <header>
             <img src="../src/ynLogo.svg" alt="너의 이름은." />
             <ul id="index">
@@ -24,7 +25,7 @@
                 <li data-link="../5CentimetersPerSecond/5CPS.html">
                     초속 5센티미터
                 </li>
-                <li data-link="../otherPage/other.html">그 외</li>
+                <!-- <li data-link="../otherPage/other.html">그 외</li> -->
             </ul>
         </header>
 
@@ -210,7 +211,20 @@
                 >
             </div>
         </div>
-
-        <script src="./yourName.js"></script>
+        <footer>
+            <div id="bgmInfo">
+                <img id="bgmCtrl" src="../src/play.png" />
+                <div>
+                    <p id="bgmName">前前前世(전전전세) - RADWIMPS</p>
+                </div>
+            </div>
+            <div id="backgroundChanger">
+                <img src="../src/nextIcon.png" alt="next" />
+            </div>
+            <audio id="bgm" preload="auto" loop>
+                <source src="../src/zenzenzense.mp3"
+            </audio>
+            <script src="./yourName.js"></script>
+        </footer>
     </body>
 </html>

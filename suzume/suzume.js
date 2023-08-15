@@ -50,7 +50,7 @@ bgChanger.addEventListener("mouseout", () => {
 });
 
 let bgList = ["1.avif", "2.jpeg", "3.jpeg", "4.jpeg", "5.jpeg", "6.jpeg"];
-let i = 1;
+let i = 0;
 bgChanger.addEventListener("click", () => {
     bgimg.style.animation = "press 0.5s forwards";
     setTimeout(() => {
@@ -59,5 +59,7 @@ bgChanger.addEventListener("click", () => {
     setTimeout(() => {
         bgimg.style.animation = "spread 0.5s forwards";
     }, 1000);
-    i == 5 ? (i = 0) : i++;
+    i == bgList.length - 1 ? (i = 0) : i++;
+
+    // setTimeout 은 우선순위가 낮게 동작함
 });

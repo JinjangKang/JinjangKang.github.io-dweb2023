@@ -1,3 +1,26 @@
+#brightness {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 0;
+}
+
+#bgimg {
+    background-image: url("../src/weatherBGI.jpeg");
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    background-position: center;
+    background-size: cover;
+}
+
 #ahs {
     position: absolute;
     width: 100vw;
@@ -31,11 +54,6 @@ html {
 body {
     height: 100vh;
     margin: 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url(../src/weatherBGI.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     overflow: hidden;
 }
 
@@ -145,8 +163,8 @@ input {
 
 label {
     display: inline-block;
-    margin: 0 -3px -1px;
-    padding: 10px 10px;
+    margin: 0 -2px -1px;
+    padding: 10px 9px;
     /* font-weight: 400; */
     text-align: center;
     color: #bbb;
@@ -164,6 +182,8 @@ input:checked + label {
     border-top: 2px solid #2e9cdf;
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
     color: #ffffff;
 }
 
@@ -281,4 +301,157 @@ input:not(:checked) + label {
     border-radius: 20px;
     width: 100%;
     height: 48%;
+}
+
+#bgmInfo {
+    /* background-color: rgba(99, 169, 231, 0.3); */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    border-radius: 10px;
+    position: fixed;
+    bottom: 3%;
+    left: 2%;
+    width: 200px;
+    height: 40px;
+
+    overflow: hidden;
+}
+
+#bgmCtrl {
+    position: relative;
+    top: 50%;
+    left: 5%;
+    height: 80%;
+
+    transform: translate(0%, -50%);
+    float: left;
+
+    /* border: solid #ffffff;
+    border-radius: 20px; */
+
+    cursor: pointer;
+}
+
+#bgmInfo div {
+    position: absolute;
+    float: left;
+    height: 100%;
+    margin-left: 20%;
+    width: max-content;
+    color: rgb(255, 255, 255, 0.7);
+
+    overflow: hidden;
+}
+
+#bgmName {
+    margin: 0;
+    position: relative;
+    left: 10%;
+    top: 50%;
+    float: left;
+    transform: translateY(-50%);
+
+    animation: text-scroll 10s linear infinite;
+}
+
+#backgroundChanger {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    border-radius: 10px;
+    position: fixed;
+    bottom: 3%;
+    right: 2%;
+    width: 50px;
+    height: 50px;
+
+    overflow: hidden;
+}
+
+#backgroundChanger:hover {
+    cursor: pointer;
+}
+#backgroundChanger img {
+    position: absolute;
+    width: 70%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-44%, -47%);
+    opacity: 0.8;
+}
+
+@keyframes backViewer {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes leaveViewer {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes press {
+    0% {
+        height: 100vh;
+        width: 100vw;
+        background-size: cover;
+    }
+    100% {
+        height: 1px;
+        width: 100vw;
+        background-size: cover;
+    }
+}
+@keyframes spread {
+    0% {
+        height: 1px;
+        width: 100vw;
+        background-size: cover;
+    }
+    100% {
+        height: 100vh;
+        background-size: cover;
+    }
+}
+
+@keyframes text-scroll {
+    from {
+        transform: translate(80%, -50%);
+        -moz-transform: translate(80%, -50%);
+        -webkit-transform: translate(80%, -50%);
+        -o-transform: translate(80%, -50%);
+        -ms-transform: translate(80%, -50%);
+    }
+    to {
+        transform: translate(-120%, -50%);
+        -moz-transform: translate(-120%, -50%);
+        -webkit-transform: translate(-120%, -50%);
+        -o-transform: translate(-120%, -50%);
+        -ms-transform: translate(-120%, -50%);
+    }
+}
+@media screen and (max-width: 1150px) {
+    #index li {
+        font-size: 18px; /* 작은 크기로 변경 */
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    #index li {
+        font-size: 16px; /* 작은 크기로 변경 */
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    #index li {
+        font-size: 14px; /* 작은 크기로 변경 */
+        margin-right: 10px;
+    }
 }

@@ -11,8 +11,9 @@
     </head>
     <head> </head>
     <body>
+        <div id="bgimg"></div>
         <div id="ahs"></div>
-
+        <div id="brightness"></div>
         <header>
             <img src="../src/5cpsLogo.webp" alt="초속 5센티미터" />
             <ul id="index">
@@ -25,7 +26,7 @@
                 <li data-link="../5CentimetersPerSecond/5CPS.html">
                     초속 5센티미터
                 </li>
-                <li data-link="../otherPage/other.html">그 외</li>
+                <!-- <li data-link="../otherPage/other.html">그 외</li> -->
             </ul>
         </header>
 
@@ -148,6 +149,22 @@
                 >
             </div>
         </div>
-        <script src="./5CPS.js"></script>
+        <footer>
+            <div id="bgmInfo">
+                <img id="bgmCtrl" src="../src/play.png" />
+                <div>
+                    <p id="bgmName">
+                        One more time One more chance - 山崎まさよし
+                    </p>
+                </div>
+            </div>
+            <div id="backgroundChanger">
+                <img src="../src/nextIcon.png" alt="next" />
+            </div>
+            <audio id="bgm" preload="auto" loop>
+                <source src="../src/5PCS.mp3"
+            </audio>
+            <script src="./5CPS.js"></script>
+        </footer>
     </body>
 </html>

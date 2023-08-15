@@ -10,8 +10,9 @@
         />
     </head>
     <body>
+        <div id="bgimg"></div>
         <div id="ahs"></div>
-
+        <div id="brightness"></div>
         <header>
             <img src="../src/weatherLogo.svg" alt="날씨의 아이" />
             <ul id="index">
@@ -24,7 +25,7 @@
                 <li data-link="../5CentimetersPerSecond/5CPS.html">
                     초속 5센티미터
                 </li>
-                <li data-link="../otherPage/other.html">그 외</li>
+                <!-- <li data-link="../otherPage/other.html">그 외</li> -->
             </ul>
         </header>
 
@@ -212,6 +213,20 @@
                 </iframe>
             </div>
         </div>
-        <script src="./weathering.js"></script>
+        <footer>
+            <div id="bgmInfo">
+                <img id="bgmCtrl" src="../src/play.png" />
+                <div>
+                    <p id="bgmName">Weathering With You - RADWIMPS</p>
+                </div>
+            </div>
+            <div id="backgroundChanger">
+                <img src="../src/nextIcon.png" alt="next" />
+            </div>
+            <audio id="bgm" preload="auto" loop>
+                <source src="../src/Weathering_With_You.mp3"
+            </audio>
+            <script src="./weathering.js"></script>
+        </footer>
     </body>
 </html>
